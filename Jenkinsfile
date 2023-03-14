@@ -10,6 +10,8 @@ pipeline {
 			steps {
 				sh "docker run -itdp 801:80 --name 23Q2 httpd"
 				sh "docker cp /mnt/httpd-2/index.html 23Q2:/usr/local/apache2/htdocs"
+				sh "docker exec -it 23Q2 bash"
+				sh "chmod -R 777 htdocs"
 			}
 		}
 	}
