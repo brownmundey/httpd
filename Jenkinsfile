@@ -6,7 +6,7 @@ pipeline {
 		}
 	}
 	stages {
-		stage ("deploy-to-hosts") {
+		stage ("deploy-to-hosts2") {
 			steps {
 				sh "sudo chmod -R 777 /mnt/free/*"
 				sh "ansible-playbook test1.yaml"
