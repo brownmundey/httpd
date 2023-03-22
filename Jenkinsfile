@@ -2,7 +2,7 @@ pipeline {
 	agent {
 		label {
 			label "built-in"
-			customWorkspace "/etc/ansible/"
+			customWorkspace "/mnt/free"
 		}
 	}
 	stages {
