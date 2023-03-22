@@ -9,7 +9,7 @@ pipeline {
 		stage ("deploy-to-hosts") {
 			steps {
 				sh "sudo cd /"
-				sh "sudo chmod -R 777 mnt/"
+				sh "sudo chmod -R 777 /mnt"
 				sh "ansible-playbook test2.yaml"
 				
 				
