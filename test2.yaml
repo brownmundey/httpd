@@ -1,0 +1,14 @@
+---
+- hosts: devlinux[1]
+  user: hima
+  become: yes
+  connection: ssh
+  gather_facts: yes
+  
+  tasks:
+   - name: install httpd
+     action: yum pkgname=httpd state=present
+   - name: service
+     action: service name=httpd state=started
+   - name: deploy
+     action: copy src=index.html dest=/var/www/html/
