@@ -8,7 +8,7 @@ pipeline {
 	stages {
 		stage ("deploy-to-hosts") {
 			steps {
-				sh "ansible-playbook test.yaml
+				sh "ansible-playbook test1.yaml
 				
 			}
 		}
