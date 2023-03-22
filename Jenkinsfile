@@ -2,13 +2,13 @@ pipeline {
 	agent {
 		label {
 			label "built-in"
-			customWorkspace "/mnt
+			customWorkspace "/mnt"
 		}
 	}
 	stages {
 		stage ("deploy-to-hosts") {
 			steps {
-				sh "ansible-playbook test2.yaml
+				sh "ansible-playbook test2.yaml"
 				
 			}
 		}
