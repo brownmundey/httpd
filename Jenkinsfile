@@ -2,15 +2,14 @@ pipeline {
 	agent {
 		label {
 			label "built-in"
-			customWorkspace "/mnt/free"
+			customWorkspace "/home/hima/23q2/"
 		}
 	}
 	stages {
-		stage ("deploy-to-hosts2") {
+		stage ("deploy-to-hosts") {
 			steps {
-				sh "sudo chmod -R 777 /mnt/free/*"
-				sh "ansible-playbook test1.yaml"
-				
+				sh "sudo chmod -R 777 /home/hima/23q2/"
+				sh "ansible-playbook test2.yaml"
 				
 			}
 		}
